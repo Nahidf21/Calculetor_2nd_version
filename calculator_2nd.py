@@ -16,24 +16,25 @@ oparetions={
     "*":multiply,
     "/":devide
 }
-
-num1=int(input("Enter your first number: "))
-oparetions1()
-action="Yes"
-while action!="No":
-    symtable=input("Select your symble: ")
-    num2=int(input("enter the second number: "))
-    answer1= oparetions[symtable](num1,num2)
-
+def calculetor():
+    num1=float(input("Enter your first number: "))
     oparetions1()
-    symtable2=input("Select your Symbol: ")
-    num3=int(input("Enter your third number: "))
-    answer2=oparetions[symtable2](answer1,num3)
-    print(answer2)
-    if input("Select Yes or No ")=="Yes":
-       num1= answer2
-    else:
-        action="No"
+    action="Yes"
+    while action!="No":
+        symtable=input("Select your symble: ")
+        num2=float(input("enter the second number: "))
+        answer1= oparetions[symtable](num1,num2)
 
-    
+        oparetions1()
+        symtable2=input("Select your Symbol: ")
+        num3=float(input("Enter your third number: "))
+        answer2=oparetions[symtable2](answer1,num3)
+        print(answer2)
+        if input("Select Yes or No ")=="Yes":
+            num1= answer2
+        else:
+            action="No"
+            calculetor()
+
+calculetor()    
 
