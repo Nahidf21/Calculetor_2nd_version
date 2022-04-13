@@ -26,7 +26,7 @@ def calculetor():
         answer1= oparetions[symtable](num1,num2)
 
         oparetions1()
-        symtable2=input("Select your Symbol: ")
+        symtable2=input("Select your Symbol from the list: ")
         num3=float(input("Enter your third number: "))
         answer2=oparetions[symtable2](answer1,num3)
         print(answer2)
